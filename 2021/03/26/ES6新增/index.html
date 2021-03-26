@@ -6,19 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/3 | 辛跃的个人网站</title>
+  <title>ES6新增语法 | 辛跃的个人网站</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="辛跃的个人网站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="辛跃的个人网站">
-<meta property="og:url" content="http://example.com/archives/2021/03/index.html">
+  <meta name="description" content="新增模板字符串（为JavaScript提供了简单的字符串插值功能） 模板字符串  ES6新增的创建字符串的方式，使用反引号定义  123let name &#x3D; &#96;zhang&#96;;let say &#x3D; &#96;hello,my name is $&amp;#123;name&amp;#125;&#96;console.log(say);&#x2F;&#x2F;hello,my name is zhang   可换行  1234567891011let">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6新增语法">
+<meta property="og:url" content="http://example.com/2021/03/26/ES6%E6%96%B0%E5%A2%9E/index.html">
 <meta property="og:site_name" content="辛跃的个人网站">
-<meta property="og:description" content="辛跃的个人网站">
+<meta property="og:description" content="新增模板字符串（为JavaScript提供了简单的字符串插值功能） 模板字符串  ES6新增的创建字符串的方式，使用反引号定义  123let name &#x3D; &#96;zhang&#96;;let say &#x3D; &#96;hello,my name is $&amp;#123;name&amp;#125;&#96;console.log(say);&#x2F;&#x2F;hello,my name is zhang   可换行  1234567891011let">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/Administrator/Desktop/QQ截图20210322123712.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210324221924767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3NzM1NTAz,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-03-26T14:12:09.332Z">
+<meta property="article:modified_time" content="2021-03-26T14:38:55.852Z">
 <meta property="article:author" content="xinyue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/Administrator/Desktop/QQ截图20210322123712.png">
   
     <link rel="alternative" href="/atom.xml" title="辛跃的个人网站" type="application/atom+xml">
   
@@ -222,182 +227,300 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-ES6新增" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      ES6新增语法
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2021/03/26/ES6%E6%96%B0%E5%A2%9E/" class="archive-article-date">
         <time datetime="2021-03-26T14:12:09.332Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <ol>
+<li><p><strong><font color="red">新增模板字符串（为JavaScript提供了简单的字符串插值功能）</font></strong></p>
+<p><strong>模板字符串</strong></p>
+<ul>
+<li>ES6新增的创建字符串的方式，使用反引号定义</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">`zhang`</span>;</span><br><span class="line"><span class="keyword">let</span> say = <span class="string">`hello,my name is <span class="subst">$&#123;name&#125;</span>`</span></span><br><span class="line"><span class="built_in">console</span>.log(say);<span class="comment">//hello,my name is zhang</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可换行</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = &#123;</span><br><span class="line">  name: <span class="string">&#x27;zhang&#x27;</span>,</span><br><span class="line">  age: <span class="number">12</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> html = <span class="string">`</span></span><br><span class="line"><span class="string">name: &#x27;zhang&#x27;,</span></span><br><span class="line"><span class="string">age:12</span></span><br><span class="line"><span class="string">`</span>;</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br><span class="line"><span class="built_in">console</span>.log(html);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Administrator\Desktop\QQ截图20210322123712.png" alt="QQ截图20210322123712"></p>
+<ul>
+<li>可调用函数</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> say = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;hhhhhhhhhhh&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> greet = <span class="string">`<span class="subst">$&#123;say()&#125;</span> aaaaaaaa`</span>;</span><br><span class="line"><span class="built_in">console</span>.log(greet);<span class="comment">//hhhhhhhhhhh aaaaaaaa</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>实例方法</strong></p>
+<ul>
+<li>startsWith()：表示参数字符串是否在原字符串的头部，返回布尔值</li>
+<li>endsWith()：表示参数字符串是否在原字符串的尾部，返回布尔值</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">`hello world!`</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str.startsWith(<span class="string">`hello`</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.endsWith(<span class="string">`!`</span>));<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>repeat()：方法表示将原字符串重复n次，返回一个新的字符串</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;x&#x27;</span>.repeat(<span class="number">3</span>) <span class="comment">//xxx</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong><font color="red">箭头函数</font></strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//语法:() =&gt; &#123;&#125;</span></span><br><span class="line"><span class="keyword">const</span> fn = <span class="function">() =&gt;</span> &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>函数体中只有一句代码，且代码的执行结果就是返回值，可以省略大括号</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1 + num2</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> sum = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> num1 + num2</span><br></pre></td></tr></table></figure>
+
+<p>函数体中只有一句代码，参数只有一个，且代码的执行结果就是返回值，可以省略大括号和小括号</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> num1</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> sum = <span class="function"><span class="params">num1</span> =&gt;</span> num1</span><br></pre></td></tr></table></figure>
+
+<p>箭头函数不绑定this关键字，箭头函数中的this，指向的是<strong>函数定义位置的上下文this</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">name</span>: <span class="string">&#x27;张三&#x27;</span> &#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">this</span>);<span class="comment">//obj</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>);<span class="comment">//obj</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> res = fn.call(obj)</span><br><span class="line">res();</span><br></pre></td></tr></table></figure>
+
+<p>面试题</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> age = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  age: <span class="number">20</span>,</span><br><span class="line">  say: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.age);<span class="comment">//10</span></span><br><span class="line">    <span class="built_in">console</span>.log(age);<span class="comment">//10</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.age);<span class="comment">//10</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">obj.say();</span><br></pre></td></tr></table></figure></li>
+<li><p><strong><font color="red">for-of（用来遍历数据—例如数组中的值。）</font></strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> arr) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i) <span class="comment">//打印出来的是value 2,3,5,4,2,2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123; <span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span> &#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(obj));<span class="comment">//[&#x27;a&#x27;,&#x27;b&#x27;,&#x27;c&#x27;]</span></span><br><span class="line"><span class="comment">//使用Object.keys方法将对象的键名生成一个数组，然后遍历这个数组</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> key <span class="keyword">of</span> <span class="built_in">Object</span>.keys(obj)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(obj[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p><strong><font color="red">arguments对象可被不定参数和默认参数完美代替。</font></strong></p>
+<p>当开发人员不好确定用户输入的参数是几个的时候用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//es6之前</span></span><br><span class="line"><span class="comment">//封装自己的数学对象</span></span><br><span class="line"><span class="keyword">var</span> myMath = &#123;</span><br><span class="line">  PI: <span class="number">3.141592653589793</span>,</span><br><span class="line">  max: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> max = <span class="built_in">arguments</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">arguments</span>[i] &gt; max) &#123;</span><br><span class="line">        max = <span class="built_in">arguments</span>[i];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(myMath.PI);<span class="comment">//3.141592653589793</span></span><br><span class="line"><span class="built_in">console</span>.log(myMath.max(<span class="number">1</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">32</span>));<span class="comment">//33</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//es6之后 因为箭头函数不可使用arguments对象</span></span><br><span class="line"><span class="comment">//不定参数rest语法返回数组,  ...是spread扩展运算符</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">...args</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(args);<span class="comment">//[10，23,98]</span></span><br><span class="line">&#125;</span><br><span class="line">sum(<span class="number">10</span>, <span class="number">23</span>, <span class="number">98</span>)</span><br><span class="line">---------------------------------------------------------------</span><br><span class="line"><span class="keyword">const</span> sum = <span class="function">(<span class="params">...args</span>) =&gt;</span> <span class="built_in">console</span>.log(args);<span class="comment">//[10，23,98]</span></span><br><span class="line">sum(<span class="number">10</span>, <span class="number">23</span>, <span class="number">98</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p><strong><font color="red">ES6将promise对象纳入规范，提供了原生的Promise对象。</font></strong></p>
+<p>详见另一篇博客</p>
+</li>
+<li><p><strong><font color="red">增加了let和const命令，用来声明变量。</font></strong></p>
+</li>
+<li><p><strong><font color="red">增加了块级作用域</font></strong></p>
+</li>
+<li><p><strong><font color="red">let命令实际上就增加了块级作用域。</font></strong></p>
+</li>
+<li><p><strong><font color="red">还有就是引入module模块的概念</font></strong></p>
+<p>模块化是指将一个大的程序文件，拆分成许多小的文件，然后将小文件组合起来。</p>
+<p><strong>模块化的好处：</strong></p>
+<p>模块化的优势有以下几点：</p>
+<ol>
+<li>防止命名冲突</li>
+<li>代码复用</li>
+<li>高维护性</li>
+</ol>
+<p><strong>模块化规范产品：</strong></p>
+<p>ES6之前的模块化规范有：</p>
+<ol>
+<li>CommonJS   =&gt;  NodeJS、Browserify</li>
+<li>AMD   =&gt;  requireJS</li>
+<li>CMD   =&gt;  seaJS</li>
+</ol>
+<p><strong>ES6模块化语法</strong></p>
+<p>模块功能主要由两个命令构成：export 和 import</p>
+<p>export ：用于规定模块的对外接口</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导出简单数据类型</span></span><br><span class="line"><span class="comment">//方式一</span></span><br><span class="line"><span class="keyword">let</span> age = <span class="number">12</span>;</span><br><span class="line"><span class="keyword">let</span> aa = <span class="number">13</span>;</span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">  age,</span><br><span class="line">  aa</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方式二</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> bb = <span class="number">13</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.导出函数/类</span></span><br><span class="line"><span class="comment">//方式一</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">cc</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> cc</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">dd</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">run</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;banpan&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方式二</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params">ee</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> ee</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ff</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="title">run</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;ban&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> &#123; f2, ff &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.default</span></span><br><span class="line"><span class="keyword">let</span> ga = <span class="string">&quot;zhangyixing&quot;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> ga</span><br></pre></td></tr></table></figure>
+
+
+
+<p>import ：用于输入其他模块提供的功能</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.导入方式一</span></span><br><span class="line"><span class="keyword">import</span> &#123; age, bb, f, dd, f2, ff &#125; <span class="keyword">from</span> <span class="string">&quot;./export.js&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(age);</span><br><span class="line"><span class="built_in">console</span>.log(bb);</span><br><span class="line"><span class="built_in">console</span>.log(f(<span class="string">&#x27;cc&#x27;</span>));</span><br><span class="line"><span class="keyword">const</span> d = <span class="keyword">new</span> dd();</span><br><span class="line">d.run()</span><br><span class="line"><span class="built_in">console</span>.log(f2(<span class="string">&#x27;ee&#x27;</span>));</span><br><span class="line"><span class="keyword">const</span> d2 = <span class="keyword">new</span> ff();</span><br><span class="line">d2.run()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//2.导入方式二 用default 导出的，导入时可以随便起名且不用大括号</span></span><br><span class="line"><span class="keyword">import</span> mmm <span class="keyword">from</span> <span class="string">&quot;./export.js&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(mmm);</span><br><span class="line"></span><br><span class="line"><span class="comment">//3.导入方式三：导入所有 并起别名为info</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> info <span class="keyword">from</span> <span class="string">&quot;./export.js&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(info);</span><br><span class="line"><span class="built_in">console</span>.log(info.age);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20210324221924767.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ3NzM1NTAz,size_16,color_FFFFFF,t_70" alt="20210324221924767"></p>
+</li>
+</ol>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/03/26/ES6%E6%96%B0%E5%A2%9E/" target="_blank">ES6新增语法</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          xinyue
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2021/03/26/ES6新增/" title="ES6新增语法" target="_blank">http://example.com/2021/03/26/ES6新增/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          https://xinyue-cwhy.github.io/
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/26/ES6%E6%96%B0%E5%A2%9E/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/03/26/%E5%85%B3%E4%BA%8E%E8%BF%87%E6%BB%A4%E5%99%A8filter/" class="archive-article-date">
-        <time datetime="2021-03-26T14:10:49.020Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/26/%E5%85%B3%E4%BA%8E%E8%BF%87%E6%BB%A4%E5%99%A8filter/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于过滤器filter</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/03/26/%E5%85%B3%E4%BA%8E%E8%BF%87%E6%BB%A4%E5%99%A8filter/" target="_blank">关于过滤器filter</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/03/26/%E5%85%B3%E4%BA%8E%E9%97%AD%E5%8C%85/" class="archive-article-date">
-        <time datetime="2021-03-26T14:09:43.970Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/03/26/%E5%85%B3%E4%BA%8E%E9%97%AD%E5%8C%85/" target="_blank">关于闭包</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/03/26/ES6%20%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/" class="archive-article-date">
-        <time datetime="2021-03-26T14:05:40.349Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-26</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/03/26/ES6%20%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/" target="_blank">深拷贝和浅拷贝</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2021/03/25/hello-world/" class="archive-article-date">
-        <time datetime="2021-03-24T16:16:10.486Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-25</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2021/03/25/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
 
 
           </div>
@@ -438,8 +561,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
